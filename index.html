@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language Learning App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Learn a New Language from JHTK</h1>
+      <label for="language-select">Choose a Language:</label>
+      <select id="language-select" onchange="changeLanguage()">
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="hi">Hindi</option>
+        <option value="te">Telugu</option>
+      </select>
+    </header>
+
+    <section id="flashcards">
+      <h2>Flashcards</h2>
+      <div class="card" id="flashcard">
+        <p id="flashcard-text">Hello - Hola</p>
+        <button onclick="nextFlashcard()">Next</button>
+      </div>
+    </section>
+
+    <section id="quiz">
+      <h2>Quiz</h2>
+      <div id="quiz-container">
+        <p id="quiz-question">What is the Spanish word for 'Thank you'?</p>
+        <input type="text" id="quiz-answer" placeholder="Your answer...">
+        <button onclick="checkAnswer()">Submit</button>
+        <button onclick="nextQuiz()">Next</button>
+        <p id="quiz-feedback"></p>
+      </div>
+    </section>
+
+    <section id="pronunciation">
+      <h2>Pronunciation Guide</h2>
+      <label for="word">Enter a word:</label>
+      <input type="text" id="word" placeholder="e.g., Hola">
+      <button onclick="speakWord()">Speak</button>
+    </section>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
